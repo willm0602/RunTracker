@@ -1,9 +1,10 @@
+/**
+ * JSX component to represent a section of the run
+ */
+
 import React from 'react';
-import { Linking, StyleSheet, Text, View, Image, Button, TouchableOpacity } from 'react-native';
-import Section from '../utils/section'
+import  {Text, View, TouchableOpacity } from 'react-native';
 import style from '../Styles'
-import {scheme} from '../Styles'
-import formatTime from "../utils/format_time";
 import Run from './run'
 
 class Sect extends React.Component
@@ -20,7 +21,7 @@ class Sect extends React.Component
         return(
             <View style={{flexDirection:"row"}}>
                 <Run run = {this.props.run}></Run>
-                <TouchableOpacity
+                <TouchableOpacity 
                     onPress = {
                         (e)=>{
                             var newList = this.list.state.sects

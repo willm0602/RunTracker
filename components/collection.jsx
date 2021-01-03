@@ -1,9 +1,9 @@
+/**
+ * JSX component for a series of runs
+ */
+
 import React from 'react';
-import { Linking, StyleSheet, Text, View, Image, Button, TouchableOpacity } from 'react-native';
 import Section from '../utils/section'
-import style from '../Styles'
-import {scheme} from '../Styles'
-import formatTime from "../utils/format_time";
 import Run from './run'
 
 class Collection extends React.Component
@@ -15,19 +15,20 @@ class Collection extends React.Component
     render()
     {
         var runs = this.props.runs
-        console.log(runs)
-        var distance = 0
-        var time = 0
-        runs.forEach((e)=>{
-            distance+=e.distance
+
+        var distance = 0 //total distance traveled in a series of sections for the run
+        var time = 0 //total time spent running
+        runs.forEach((e)=>{ //adds up the total distance and total time
+            distance+=e.distance 
             time+=e.time
         })
-        var speed = distance/time*60
-        if(time==0)
+        var speed = distance/time*60 //total distance divided by total time in miles per hour to get average speed
+        if(time==0) //prevents NaN error
         {
             speed = 0
         }
-        var total = new Section(speed,time)
+
+        var total = new Section(speed,time) //generates a section component to summarize the total run
         return(
             <Run run={total}/>
         )

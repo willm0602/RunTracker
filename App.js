@@ -1,6 +1,8 @@
+/**
+ * Main app that serves as navigation between scenes
+ */
+
 import React from 'react';
-import { Linking, StyleSheet, Text, View, Image, Button } from 'react-native';
-import styles from './Styles'
 import Home from './scenes/Home'
 import AddRun from './scenes/Add_Run'
 import { NavigationContainer } from '@react-navigation/native';

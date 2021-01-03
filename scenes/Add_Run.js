@@ -1,21 +1,23 @@
+/**
+ * Scene to add a section to the run
+ */
+
 import React from 'react';
-import { Linking, StyleSheet, Text, View, Image, Button, TouchableOpacity } from 'react-native';
+import {Text, View,TouchableOpacity } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 import styles, { scheme } from '../Styles'
 import section from '../utils/section'
-import Run from '../components/run'
 import {Sect} from '../components/sect'
-import Collection, {collection} from '../components/collection'
+import Collection from '../components/collection'
 
 class AddRun extends React.Component {
     constructor(props)
     {
         super(props)
         this.state = {
-            "sects": []
+            "sects": [] //by default there are no sections to the run yet
         }
 
-        console.log("STATE",this.state)
     }
     
     render()

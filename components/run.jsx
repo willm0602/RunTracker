@@ -1,8 +1,9 @@
+/**
+ * JSX component to describe a run
+ */
 import React from 'react';
-import { Linking, StyleSheet, Text, View, Image, Button, TouchableOpacity } from 'react-native';
-import Section from '../utils/section'
+import {Text, View } from 'react-native';
 import style from '../Styles'
-import {scheme} from '../Styles'
 import formatTime from "../utils/format_time";
 
 class Run extends React.Component
@@ -18,13 +19,14 @@ class Run extends React.Component
         var run = this.props.run
         return(
             <View style={{flexDirection:"row",includeFontPadding: false} }>
-                <Text style={style.normalText}>
+                <Text style={style.normalText}> {/** Average speed ran */}
                     {run.speed.toFixed(2)} m/hr 
                 </Text>
-                <Text style={style.normalText}>
+
+                <Text style={style.normalText}> {/** Time ran for */}
                     {formatTime(run.time)}
                 </Text>
-                <Text style={style.normalText}>
+                <Text style={style.normalText}> {/**Distance traveled */}
                     {run.distance.toFixed(2)} miles
                 </Text>
             </View>
