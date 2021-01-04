@@ -13,36 +13,24 @@ const scheme = [ //color scheme used
 ]
 
 const styles = StyleSheet.create({
-    container: { //style for the main component
-      flex: 1,
-      backgroundColor: scheme[0],
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
 
+  //font styles
     header:{ //style for main title
       color: scheme[4],
       fontSize: 30
     },
 
     subHeader:{ //style for secondary titles
-      color:scheme[4],
-      fontSize: 24,
-      marginTop: 30
+        color:scheme[4],
+        fontSize: 24,
+        marginTop: 30
     },
-
 
     refText:{ //style for link to icon source
-        color: "#ffffff",
-        fontSize: 12,
-        margin:100,
-        textAlign: "center"
-    },
-
-    logo:{ //style for logo image
-        resizeMode: "stretch",
-        width: 160,
-        height: 160,
+      color: "#ffffff",
+      fontSize: 12,
+      margin:100,
+      textAlign: "center"
     },
 
     normalText:{ //style for most text
@@ -61,12 +49,33 @@ const styles = StyleSheet.create({
       includeFontPadding: false,
       fontSize: 20
     },
+
+
+    //styles for images
+    logo:{ //style for logo image
+        resizeMode: "stretch",
+        width: 160,
+        height: 160,
+    },
+
+    
+    //Styles for buttons
     xButton:{ //style for x buttons
       backgroundColor: scheme[3]
     },
     addSectBtn:{ //style for buttons to add a section of the run
       backgroundColor: scheme[3]
+    },
+
+
+    //Other styles
+    container: { //style for the main component
+      flex: 1,
+      backgroundColor: scheme[0],
+      alignItems: 'center',
+      justifyContent: 'center',
     }
+
   });
 
 export default styles
