@@ -20,7 +20,7 @@ class Sect extends React.Component
         var run = this.props.run
         return(
             <View style={{flexDirection:"row"}}>
-                <Run run = {this.props.run}></Run>
+                <Run run = {this.props.run} style={{width:120,alignText:"right"}}></Run>
                 <TouchableOpacity 
                     onPress = {
                         (e)=>{

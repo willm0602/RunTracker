@@ -7,8 +7,7 @@ export default function Home(props) {
   return (
     <View style={styles.container}>
       <Image style = {styles.logo}
-        tintColor='#FFFFFF'
-        source={require('../assets/logo.svg')}
+        source={require('../assets/logo.png')}
       />
 
         <Button

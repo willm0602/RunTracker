@@ -33,9 +33,10 @@ const styles = StyleSheet.create({
 
 
     refText:{ //style for link to icon source
-        color: scheme[1],
-        fontSize: 8,
-        margin:20
+        color: "#ffffff",
+        fontSize: 12,
+        margin:100,
+        textAlign: "center"
     },
 
     logo:{ //style for logo image
@@ -49,8 +50,8 @@ const styles = StyleSheet.create({
       textAlign: "center",
       margin:20,
       includeFontPadding: false,
-      fontSize: 10,
-      maxWidth: 40
+      fontSize: 18,
+      maxWidth: 80
     },
 
     blackText:{ //like normalText but black
